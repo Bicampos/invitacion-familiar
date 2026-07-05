@@ -1,8 +1,10 @@
 :root {
-    --color-principal: #fdfbf7;
-    --color-texto: #4a4a4a;
-    --color-acento: #d4af37; /* Dorado elegante */
-    --color-secundario: #f5ece1;
+    --color-principal: #fdfbf7;    /* El fondo crema/blanco huesito suave */
+    --color-texto: #4a4a4a;       /* Gris elegante y suave para los textos */
+    --color-nombres: #4a4a4a;     /* Hermoso Champán Tostado / Café Moka Profundo para los nombres */
+    --color-acento: #c5a059;      /* Oro sutil suave (solo para detalles finos) */
+    --color-secundario: #f5ece1;  /* Tono champán suave para bloques */
+    --borde-sutil: rgba(110, 86, 67, 0.15);
 }
 
 body {
@@ -12,36 +14,59 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* El contenedor máximo es de 600px para que en compu no se desarme, y en celular ocupe el 100% */
 .container {
-    max-width: 600px;
+    max-width: 540px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
+/* Encabezado */
 header {
     margin-bottom: 50px;
-    border-bottom: 1px solid var(--color-secundario);
-    padding-bottom: 30px;
 }
 
-h1 {
-    font-family: 'Alex Brush', cursive;
-    font-size: 3.5rem;
+.decoracion-superior {
     color: var(--color-acento);
+    font-size: 0.8rem;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+}
+
+.titulo-elegante {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 2.6rem;
+    color: var(--color-texto);
     margin: 0;
+    letter-spacing: 1px;
 }
 
 .sub-titulo {
-    font-size: 1rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-top: 10px;
-    font-weight: 300;
+    letter-spacing: 2px;
+    margin-top: 12px;
+    color: #7a7a7a;
+    font-weight: 400;
 }
 
+.fecha-principal {
+    display: inline-block;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-nombres);
+    border-top: 1px solid var(--color-secundario);
+    border-bottom: 1px solid var(--color-secundario);
+    padding: 6px 22px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Tarjetas de los Festejados */
 .festejados-container {
     display: flex;
     flex-direction: column;
@@ -50,112 +75,176 @@ h1 {
 }
 
 .tarjeta-festejado {
-    background-color: white;
-    padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.08);
-    border: 1px solid var(--color-secundario);
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 8px;
+    border: 1px solid var(--borde-sutil);
+    box-shadow: 0 6px 20px rgba(110, 86, 67, 0.02);
+}
+
+.tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-acento);
+    font-weight: 600;
 }
 
 .tarjeta-festejado h2 {
     font-family: 'Alex Brush', cursive;
-    font-size: 2.5rem;
-    color: var(--color-acento);
-    margin: 0 0 10px 0;
+    font-size: 3.8rem;
+    color: var(--color-nombres); /* Aplicación del nuevo color moka premium */
+    margin: 5px 0 0 0;
+    font-weight: 400;
+}
+
+.linea-decorativa {
+    width: 35px;
+    height: 1px;
+    background-color: var(--color-secundario);
+    margin: 12px auto 0 auto;
 }
 
 .tarjeta-festejado p {
     font-size: 0.95rem;
-    letter-spacing: 1px;
-    margin: 5px 0;
+    line-height: 1.6;
+    color: #5a5a5a;
+    margin: 15px 0 0 0;
+    font-weight: 400;
 }
 
-.tag {
-    display: inline-block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: var(--color-secundario);
-    padding: 5px 15px;
-    border-radius: 20px;
-    margin-bottom: 15px;
-    font-weight: 600;
+/* Títulos de Sección en Playfair Display */
+.titulo-seccion {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: var(--color-texto);
+    margin: 0 0 8px 0;
 }
 
+/* Detalles del Evento */
 .detalles-evento {
-    background-color: var(--color-secundario);
-    padding: 35px 20px;
-    border-radius: 15px;
+    background-color: #ffffff;
+    border: 1px solid var(--borde-sutil);
+    padding: 45px 25px;
+    border-radius: 8px;
     margin-bottom: 50px;
+    box-shadow: 0 6px 20px rgba(110, 86, 67, 0.02);
 }
 
-.detalles-evento h3 {
+.nota-temporal {
+    font-size: 0.85rem;
+    color: var(--color-acento);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.1rem;
-    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 35px;
 }
 
-.item-ubicacion {
-    margin-bottom: 30px;
+.item-ubicacion h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin: 0 0 6px 0;
+    color: var(--color-texto);
+    font-weight: 500;
 }
 
-.item-ubicacion:last-child {
-    margin-bottom: 0;
+.horario {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-nombres);
+    margin-bottom: 12px;
+}
+
+.direccion {
+    font-size: 0.95rem;
+    color: #6a6a6a;
+    margin: 0 0 20px 0;
+}
+
+/* Botones Cuadrados Robustos para Mapas */
+.btn-mapa {
+    display: inline-block;
+    background-color: #ffffff;
+    color: var(--color-texto);
+    border: 1px solid var(--color-nombres);
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    width: 85%;
+    box-sizing: border-box;
+}
+
+.btn-mapa:hover {
+    background-color: var(--color-nombres);
+    color: #ffffff;
 }
 
 .separador {
     border: 0; 
-    border-top: 1px solid rgba(0,0,0,0.05); 
-    margin: 20px 0;
+    border-top: 1px solid var(--color-secundario); 
+    margin: 30px 0;
 }
 
-.btn-link {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--color-texto);
-    border: 1px solid var(--color-acento);
-    padding: 10px 25px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-}
-
-.btn-link:hover {
-    background-color: var(--color-acento);
-    color: white;
-    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
-}
-
-.confirmacion {
-    padding: 20px 0;
+/* Confirmación por WhatsApp */
+.confirmacion p {
+    font-size: 0.95rem;
+    color: #5a5a5a;
+    margin: 10px 0 25px 0;
+    line-height: 1.6;
 }
 
 .btn-whatsapp {
     display: inline-block;
     background-color: #25d366;
-    color: white;
-    padding: 15px 35px;
+    color: #ffffff;
+    padding: 16px 40px;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     font-weight: 600;
-    border-radius: 30px;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-    transition: transform 0.2s ease;
+    border-radius: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 .btn-whatsapp:hover {
-    transform: scale(1.03);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
 }
 
+/* Footer y Nota de Regalo */
 footer {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    opacity: 0.7;
-    margin-top: 40px;
+    margin-top: 60px;
+    padding: 0 10px;
+}
+
+.linea-final {
+    width: 50px;
+    height: 1px;
+    background-color: var(--color-secundario);
+    margin: 0 auto 25px auto;
+}
+
+.mensaje-regalo {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #6a6a6a;
+    font-weight: 400;
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.bloque-cajita {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--color-nombres);
 }
