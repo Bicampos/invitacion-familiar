@@ -1,0 +1,161 @@
+:root {
+    --color-principal: #fdfbf7;
+    --color-texto: #4a4a4a;
+    --color-acento: #d4af37; /* Dorado elegante */
+    --color-secundario: #f5ece1;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* El contenedor máximo es de 600px para que en compu no se desarme, y en celular ocupe el 100% */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    margin-bottom: 50px;
+    border-bottom: 1px solid var(--color-secundario);
+    padding-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 3.5rem;
+    color: var(--color-acento);
+    margin: 0;
+}
+
+.sub-titulo {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.festejados-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.tarjeta-festejado {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.08);
+    border: 1px solid var(--color-secundario);
+}
+
+.tarjeta-festejado h2 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 2.5rem;
+    color: var(--color-acento);
+    margin: 0 0 10px 0;
+}
+
+.tarjeta-festejado p {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--color-secundario);
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.detalles-evento {
+    background-color: var(--color-secundario);
+    padding: 35px 20px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.detalles-evento h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.item-ubicacion {
+    margin-bottom: 30px;
+}
+
+.item-ubicacion:last-child {
+    margin-bottom: 0;
+}
+
+.separador {
+    border: 0; 
+    border-top: 1px solid rgba(0,0,0,0.05); 
+    margin: 20px 0;
+}
+
+.btn-link {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-texto);
+    border: 1px solid var(--color-acento);
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-link:hover {
+    background-color: var(--color-acento);
+    color: white;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+}
+
+.confirmacion {
+    padding: 20px 0;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.03);
+}
+
+footer {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    margin-top: 40px;
+}
