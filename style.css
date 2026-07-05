@@ -35,13 +35,14 @@ header {
     margin-bottom: 15px;
 }
 
-.titulo-elegante {
+.titulo-foto {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
+    font-style: italic; /* Esto le da la inclinación exacta de la foto */
     font-size: 2.6rem;
     color: var(--color-texto);
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .sub-titulo {
